@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangesh Tiwari — Resume</title>
+  <meta name="description" content="Resume of Mangesh Tiwari — Electronics & Telecommunication Engineer.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --serif: 'EB Garamond', 'Georgia', serif;
+      --sans: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+      --black: #111;
+      --dark: #333;
+      --mid: #555;
+      --light: #888;
+      --rule: #ccc;
+      --bg: #fff;
+      --page-bg: #e8e8e8;
+    }
+
+    html { font-size: 15px; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--page-bg);
+      color: var(--dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--dark); text-decoration: none; }
+
+    /* ═══ PAGE ═══ */
+    .page {
+      max-width: 780px;
+      margin: 2rem auto;
+      background: var(--bg);
+      padding: 2.5rem 2.8rem;
+      box-shadow: 0 2px 20px rgba(0,0,0,.07);
+    }
+
+    /* ═══ ACTIONS (screen only) ═══ */
+    .actions {
+      position: fixed; top: 1rem; right: 1rem;
+      display: flex; gap: .4rem; z-index: 100;
+    }
+    .action-btn {
+      display: inline-flex; align-items: center; gap: .35rem;
+      padding: .5rem 1rem; border-radius: 4px;
+      font: 600 .78rem/1 var(--sans); cursor: pointer;
+      border: 1px solid var(--rule); background: #fff; color: var(--dark);
+      transition: all .15s;
+    }
+    .action-btn:hover { border-color: var(--dark); }
+    .action-btn--primary { background: var(--black); color: #fff; border-color: var(--black); }
+    .action-btn--primary:hover { background: #333; }
+
+    /* ═══ HEADER ═══ */
+    .header { margin-bottom: 1.4rem; }
+
+    .name {
+      font: 700 1.9rem/1.1 var(--serif);
+      color: var(--black);
+      letter-spacing: -.02em;
+    }
+
+    .tagline {
+      font-size: .82rem; color: var(--mid); margin-top: .2rem;
+      font-weight: 400;
+    }
+
+    .contact {
+      display: flex; flex-wrap: wrap; gap: .15rem .65rem;
+      margin-top: .55rem; font-size: .76rem; color: var(--mid);
+    }
+    .contact a { border-bottom: 1px solid transparent; }
+    .contact a:hover { border-bottom-color: var(--dark); }
+    .sep { color: var(--rule); }
+
+    /* ═══ DIVIDER ═══ */
+    hr {
+      border: none; border-top: 1px solid var(--rule);
+      margin: 1.2rem 0;
+    }
+
+    /* ═══ SECTION ═══ */
+    .section { margin-bottom: 1.15rem; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-title {
+      font: 600 .7rem/1 var(--sans);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--black);
+      margin-bottom: .6rem;
+    }
+
+    /* ═══ SUMMARY ═══ */
+    .summary {
+      font: 400 .84rem/1.7 var(--sans);
+      color: var(--dark);
+    }
+
+    /* ═══ ENTRIES (experience, education) ═══ */
+    .entry { margin-bottom: .75rem; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-head {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: .1rem .5rem;
+    }
+    .entry-title { font-weight: 700; font-size: .84rem; color: var(--black); }
+    .entry-date { font-size: .74rem; color: var(--light); white-space: nowrap; }
+    .entry-sub { font-size: .8rem; color: var(--mid); }
+
+    .entry-bullets {
+      margin-top: .25rem; padding-left: 1rem;
+      font-size: .8rem; color: var(--dark); line-height: 1.6;
+      list-style-type: '–  ';
+    }
+    .entry-bullets li { margin-bottom: .15rem; padding-left: .15rem; }
+    .entry-bullets li::marker { color: var(--light); }
+
+    .entry-meta { font-size: .76rem; color: var(--light); margin-top: .15rem; }
+
+    /* ═══ PROJECTS ═══ */
+    .proj { margin-bottom: .6rem; }
+    .proj:last-child { margin-bottom: 0; }
+
+    .proj-head {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: .1rem .5rem;
+    }
+    .proj-name { font-weight: 700; font-size: .82rem; color: var(--black); }
+    .proj-tag {
+      font-size: .65rem; font-weight: 600; color: var(--mid);
+      border: 1px solid var(--rule); padding: .05rem .4rem;
+      border-radius: 3px; white-space: nowrap;
+    }
+    .proj-desc {
+      font-size: .79rem; color: var(--dark); line-height: 1.6; margin-top: .15rem;
+    }
+    .proj-tech {
+      font-size: .72rem; color: var(--light); margin-top: .12rem;
+    }
+
+    /* ═══ SKILLS ═══ */
+    .skills-table {
+      width: 100%; font-size: .8rem; border-collapse: collapse;
+    }
+    .skills-table td {
+      padding: .25rem 0; vertical-align: top;
+    }
+    .skills-table td:first-child {
+      font-weight: 600; color: var(--black); width: 145px;
+      white-space: nowrap; padding-right: .75rem;
+    }
+    .skills-table td:last-child { color: var(--dark); }
+
+    /* ═══ CERTS ═══ */
+    .cert-row {
+      display: flex; justify-content: space-between;
+      align-items: baseline; flex-wrap: wrap; gap: .05rem .5rem;
+      font-size: .8rem; margin-bottom: .2rem;
+    }
+    .cert-row:last-child { margin-bottom: 0; }
+    .cert-name { font-weight: 600; color: var(--black); }
+    .cert-meta { font-size: .72rem; color: var(--light); }
+
+    /* ═══ PRINT ═══ */
+    @media print {
+      html { font-size: 13px; }
+      body { background: #fff; }
+      .page { margin:0; padding:1.8rem 2rem; box-shadow:none; max-width:none; }
+      .actions { display:none; }
+      a { color: var(--dark) !important; }
+      @page { size:A4; margin:8mm 6mm; }
+    }
+
+    @media (max-width:640px) {
+      .page { margin:.5rem; padding:1.5rem 1.2rem; }
+      .name { font-size:1.5rem; }
+      .actions { top:.5rem; right:.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions">
+    <a href="index.html" class="action-btn">← Portfolio</a>
+    <button class="action-btn action-btn--primary" onclick="window.print()">⎙ Print / Save PDF</button>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="name">Mangesh Tiwari</h1>
+      <p class="tagline">Electronics &amp; Telecommunication Engineer</p>
+      <div class="contact">
+        <a href="mailto:mangeshtiwari852@gmail.com">mangeshtiwari852@gmail.com</a>
+        <span class="sep">·</span>
+        <a href="tel:+919833372496">+91 98333 72496</a>
+        <span class="sep">·</span>
+        <a href="https://linkedin.com/in/mangesh-tiwari-3804a8273" target="_blank">LinkedIn</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/MANGESHti04" target="_blank">GitHub</a>
+        <span class="sep">·</span>
+        <span>Mumbai, India</span>
+      </div>
+    </header>
+
+    <hr>
+
+    <!-- SUMMARY -->
+    <div class="section">
+      <p class="summary">
+        Fresh Electronics &amp; Telecommunication graduate with hands-on project experience
+        in <strong>embedded systems</strong>, <strong>computer vision</strong>, and <strong>cybersecurity</strong>.
+        Built a self-balancing agricultural rover with a custom Kalman filter and 200&thinsp;Hz PID loop,
+        and a YOLO-based freshness detection system achieving 96% accuracy for Flipkart Grid 6.0.
+        Comfortable working across the full stack — from bare-metal firmware and sensor fusion
+        to ML model training and deployment.
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">B.E. Electronics &amp; Telecommunication Engineering</span>
+          <span class="entry-date">2022 – 2026</span>
+        </div>
+        <div class="entry-head">
+          <span class="entry-sub">St. Francis Institute of Technology, Mumbai</span>
+          <span class="entry-date">CGPA: 7.0 / 10</span>
+        </div>
+        <p class="entry-meta">Coursework: Embedded Systems, Control Theory, Digital Signal Processing, Computer Networks, Data Structures &amp; Algorithms</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <h2 class="section-title">Experience</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Technical Intern</span>
+          <span class="entry-date">May 2025 – Jul 2025</span>
+        </div>
+        <div class="entry-head">
+          <span class="entry-sub">CyberStance, Mumbai</span>
+        </div>
+        <ul class="entry-bullets">
+          <li>Studied malware samples (.NET and binary) and documented behavioural indicators for team reference</li>
+          <li>Researched Endpoint Detection &amp; Response (EDR) tools and compiled a comparison of open-source vs commercial solutions</li>
+          <li>Explored how AI is being used in SOC workflows — automated triage, alert correlation, and false-positive reduction</li>
+          <li>Wrote weekly write-ups on threat detection concepts and response procedures</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="proj">
+        <div class="proj-head">
+          <span class="proj-name">TerraGlide — Self-Balancing Agricultural Rover</span>
+          <span class="proj-tag">Final Year Project</span>
+        </div>
+        <p class="proj-desc">
+          Two-wheeled self-balancing rover (5&thinsp;kg payload) with a 3-tier vertical chassis.
+          Wrote bare-metal I2C code for the MPU6886 IMU, implemented a custom 1D Kalman filter
+          to remove stepper vibration noise, and ran a 200&thinsp;Hz PID loop on ESP32 hardware timers
+          driving NEMA 23 steppers via DM542 drivers. Integrated a 3-DOF robotic arm and a
+          Bluetooth-connected plant monitoring module (DHT11 + soil moisture + rain sensor).
+        </p>
+        <p class="proj-tech">ESP32 · MPU6886 · Kalman Filter · PID · NEMA 23 · DM542 · C/C++ · Bluetooth</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <span class="proj-name">Flip-Check — Smart Freshness Detection</span>
+          <span class="proj-tag">Flipkart Grid 6.0</span>
+        </div>
+        <p class="proj-desc">
+          YOLO-based system that classifies fruits and vegetables as fresh or stale with 96% accuracy.
+          Integrated barcode scanning (PyZbar) and OCR (Tesseract) for product identification,
+          with a real-time Streamlit dashboard showing freshness scores, labels, and inventory count.
+        </p>
+        <p class="proj-tech">Python · YOLO · OpenCV · Streamlit · PyZbar · Tesseract OCR · Roboflow SDK</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <span class="proj-name">Network Intrusion Detection System</span>
+        </div>
+        <p class="proj-desc">
+          Trained Random Forest and SVM classifiers on network traffic data to detect port scans,
+          DDoS patterns, and suspicious login attempts — filtering real threats from normal traffic.
+        </p>
+        <p class="proj-tech">Python · Scikit-learn · Pandas · Anomaly Detection</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <span class="proj-name">Face, Gender &amp; Age Detection</span>
+        </div>
+        <p class="proj-desc">
+          Standalone detection unit using ESP32 and Raspberry Pi Zero with a camera module.
+          Runs OpenCV's DNN module with Caffe models for face detection, then classifies age
+          and gender using SVM. Operates headless — plug in power and it starts detecting.
+        </p>
+        <p class="proj-tech">ESP32 · Raspberry Pi Zero · Python · OpenCV · Caffe DNN · SVM</p>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <span class="proj-name">Line Follower Bot</span>
+          <span class="proj-tag">IIT Bombay Tech Fest</span>
+        </div>
+        <p class="proj-desc">
+          Line-following robot with an IR sensor array and PID-tuned motor control.
+          Competed against teams from engineering colleges across India.
+        </p>
+        <p class="proj-tech">Embedded C · IR Sensors · PID Control · Arduino</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- SKILLS -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <table class="skills-table">
+        <tr>
+          <td>Languages</td>
+          <td>C, C++, Python, Embedded C, MATLAB</td>
+        </tr>
+        <tr>
+          <td>Embedded</td>
+          <td>ESP32, Arduino, Raspberry Pi, PID Control, Kalman Filtering, Sensor Fusion, Stepper Motor Control</td>
+        </tr>
+        <tr>
+          <td>ML / Vision</td>
+          <td>YOLO, OpenCV, Scikit-learn, Streamlit, Tesseract OCR, Roboflow</td>
+        </tr>
+        <tr>
+          <td>Security</td>
+          <td>Penetration Testing, Network Security, Malware Analysis, Threat Detection</td>
+        </tr>
+        <tr>
+          <td>Tools</td>
+          <td>Git, Linux, Google Cloud, PlatformIO, Wireshark, Arduino IDE</td>
+        </tr>
+      </table>
+    </div>
+
+    <hr>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-row">
+        <span class="cert-name">Junior Penetration Tester (PT1)</span>
+        <span class="cert-meta">TryHackMe · 2025</span>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">Google Cloud Cybersecurity Certificate</span>
+        <span class="cert-meta">Google · 2025</span>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">Foundation of Ethical Hacking</span>
+        <span class="cert-meta">Udacity (Accenture) · 2025</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- COMPETITIONS -->
+    <div class="section">
+      <h2 class="section-title">Competitions</h2>
+      <div class="cert-row">
+        <span class="cert-name">Flipkart Grid 6.0 — Computer Vision Track</span>
+        <span class="cert-meta">National Level · 2024–25</span>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">IIT Bombay Techfest — Line Follower</span>
+        <span class="cert-meta">National Level</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
