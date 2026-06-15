@@ -18,10 +18,7 @@
 </head>
 <body>
 
-  <!-- Background Effects -->
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-gradient-orb bg-gradient-orb--cyan" aria-hidden="true"></div>
-  <div class="bg-gradient-orb bg-gradient-orb--purple" aria-hidden="true"></div>
+
 
   <!-- ═══ Navigation ═══ -->
   <nav class="nav" id="nav">
@@ -37,6 +34,7 @@
         <li><a href="#projects" class="nav__link">Projects</a></li>
         <li><a href="#skills" class="nav__link">Skills</a></li>
         <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="resume.html" class="nav__link" target="_blank">Resume</a></li>
         <li><a href="#contact" class="nav__link nav__cta">Get in Touch</a></li>
       </ul>
     </div>
@@ -47,7 +45,7 @@
     <div class="hero__container">
       <div class="hero__badge">
         <span class="dot"></span>
-        Open to Opportunities
+        Seeking: Embedded Systems &amp; Security Engineer
       </div>
 
       <h1 class="hero__name">
@@ -59,9 +57,10 @@
       </div>
 
       <p class="hero__bio">
-        Electronics &amp; Telecommunication engineer who builds real hardware — from
-        self-balancing robots running custom Kalman filters to network security systems.
-        I like solving problems that need both a soldering iron and a terminal.
+        Electronics &amp; Telecommunication engineer with hands-on experience building
+        real-time control systems (200Hz PID), computer vision pipelines (96% accuracy),
+        and network security tools. Comfortable working across the full stack — from
+        bare-metal firmware to ML model deployment.
       </p>
 
       <div class="hero__actions">
@@ -95,42 +94,39 @@
       <div class="about__grid">
         <div class="about__text reveal reveal--delay-2">
           <p>
-            I'm a fresh Electronics &amp; Telecommunication graduate from
-            <strong>St. Francis Institute of Technology, Mumbai</strong> (2026). My final-year
-            project — a 5.6 kg self-balancing agricultural rover — taught me more about
-            control theory, motor dynamics, and late-night debugging than four years of
-            textbooks ever could.
+            Fresh Electronics &amp; Telecommunication graduate from
+            <strong>St. Francis Institute of Technology, Mumbai</strong> (2026).
+            Built a self-balancing agricultural rover with custom Kalman filtering
+            and 200Hz PID control as my final-year project.
           </p>
           <p>
-            I gravitate toward problems where software meets hardware: writing Kalman
-            filters that keep a robot upright, designing PCB-level motor control, and
-            building network security tools that actually flag real threats. I've competed
-            in <strong>Flipkart Grid 6.0</strong> and built a line-follower bot for
-            <strong>IIT Bombay's tech fest</strong>.
+            I focus on problems where software meets hardware — real-time
+            control systems, computer vision pipelines, and network security tooling.
+            Competed in <strong>Flipkart Grid 6.0</strong> (Computer Vision track)
+            and <strong>IIT Bombay Techfest</strong> (Line Follower).
           </p>
           <p>
-            When I'm not wiring circuits, I'm usually on TryHackMe breaking into things
-            (legally) or analysing malware samples — because understanding how systems
-            fail makes you better at building ones that don't.
+            Currently expanding into cybersecurity through hands-on labs
+            on TryHackMe and Google Cloud certifications.
           </p>
         </div>
 
         <div class="about__stats reveal reveal--delay-3">
           <div class="stat-card">
-            <div class="stat-card__number">7+</div>
-            <div class="stat-card__label">Projects Built</div>
+            <div class="stat-card__number">96%</div>
+            <div class="stat-card__label">ML Accuracy</div>
           </div>
           <div class="stat-card">
-            <div class="stat-card__number">7.0</div>
-            <div class="stat-card__label">CGPA</div>
+            <div class="stat-card__number">200Hz</div>
+            <div class="stat-card__label">Real-time PID</div>
           </div>
           <div class="stat-card">
-            <div class="stat-card__number">3</div>
-            <div class="stat-card__label">Certifications</div>
+            <div class="stat-card__number">5</div>
+            <div class="stat-card__label">Production Systems</div>
           </div>
           <div class="stat-card">
-            <div class="stat-card__number">1</div>
-            <div class="stat-card__label">Internship</div>
+            <div class="stat-card__number">3+</div>
+            <div class="stat-card__label">Domains</div>
           </div>
         </div>
       </div>
@@ -402,22 +398,18 @@
             <span class="skill-pill">C++</span>
             <span class="skill-pill">Python</span>
             <span class="skill-pill">Embedded C</span>
-            <span class="skill-pill">SystemVerilog</span>
             <span class="skill-pill">MATLAB</span>
-            <span class="skill-pill">HTML/CSS/JS</span>
           </div>
         </div>
 
         <div class="skill-category reveal reveal--delay-2">
           <div class="skill-category__icon skill-category__icon--security">🔒</div>
-          <h3 class="skill-category__title">Cybersecurity</h3>
+          <h3 class="skill-category__title">Security Fundamentals</h3>
           <div class="skill-category__items">
-            <span class="skill-pill">Penetration Testing</span>
             <span class="skill-pill">Network Security</span>
-            <span class="skill-pill">Malware Analysis</span>
-            <span class="skill-pill">EDR</span>
-            <span class="skill-pill">SOC Operations</span>
-            <span class="skill-pill">Threat Detection</span>
+            <span class="skill-pill">Penetration Testing (TryHackMe)</span>
+            <span class="skill-pill">Threat Analysis</span>
+            <span class="skill-pill">Wireshark</span>
           </div>
         </div>
 
@@ -470,10 +462,10 @@
               <div class="timeline-item__date">May 2025 — Jul 2025</div>
             </div>
             <ul class="timeline-item__list">
-              <li>Reverse-engineered .NET and binary malware samples; documented findings with IOC indicators on GitHub</li>
-              <li>Researched Endpoint Detection &amp; Response (EDR) tooling and wrote a comparative analysis of commercial vs open-source solutions</li>
-              <li>Investigated SOC AI use-cases: automated triage, alert correlation, and false-positive reduction in real-world SOC workflows</li>
-              <li>Delivered weekly incident-style write-ups covering threat detection methodology and response procedures</li>
+              <li>Studied .NET and binary malware samples; documented behavioural indicators for team reference</li>
+              <li>Researched EDR tools and compiled a comparison of open-source vs commercial solutions</li>
+              <li>Explored how AI is applied in SOC workflows — automated triage and alert correlation</li>
+              <li>Wrote weekly write-ups on threat detection concepts and response procedures</li>
             </ul>
           </div>
         </div>
@@ -514,10 +506,10 @@
   <section class="section contact" id="contact">
     <div class="section__container">
       <span class="section__label reveal" style="justify-content: center;">Get in Touch</span>
-      <h2 class="contact__title reveal reveal--delay-1">Let's build<br>something <span class="text-accent">together</span>.</h2>
+      <h2 class="contact__title reveal reveal--delay-1">Let's <span class="text-accent">connect</span>.</h2>
       <p class="contact__subtitle reveal reveal--delay-2">
-        I'm actively looking for opportunities in embedded systems, electronics,
-        or security engineering. Let's talk.
+        I'm seeking full-time roles in embedded systems, robotics, or
+        cybersecurity engineering. Open to relocation.
       </p>
 
       <div class="contact__links reveal reveal--delay-3">
@@ -543,7 +535,7 @@
 
   <!-- ═══ Footer ═══ -->
   <footer class="footer">
-    <p>Built with ☕ by <span>Mangesh Tiwari</span> · © 2026</p>
+    <p>© 2026 <span>Mangesh Tiwari</span></p>
   </footer>
 
   <script src="index.js"></script>

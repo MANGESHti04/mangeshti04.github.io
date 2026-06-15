@@ -34,6 +34,22 @@
 
     a { color: var(--dark); text-decoration: none; }
 
+    /* ═══ VIEW-ONLY PROTECTION ═══ */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    @media print {
+      body { display: none !important; }
+      html::after {
+        content: 'Printing is disabled. View online only.';
+        display: block; text-align: center; padding: 3rem;
+        font: 600 1.2rem/1.5 sans-serif; color: #666;
+      }
+    }
+
     /* ═══ PAGE ═══ */
     .page {
       max-width: 780px;
@@ -192,7 +208,6 @@
 
   <div class="actions">
     <a href="index.html" class="action-btn">← Portfolio</a>
-    <button class="action-btn action-btn--primary" onclick="window.print()">⎙ Print / Save PDF</button>
   </div>
 
   <div class="page">
@@ -403,5 +418,31 @@
 
   </div>
 
+  <!-- View-only protection -->
+  <script>
+    // Block right-click
+    document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+    // Block keyboard shortcuts: Ctrl+S, Ctrl+P, Ctrl+U, Ctrl+A, F12
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && ['s','p','u','a'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+      }
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+      // Block Ctrl+Shift+I (DevTools)
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+        e.preventDefault();
+      }
+      // Block Ctrl+Shift+J (Console)
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+      }
+    });
+
+    // Block drag
+    document.addEventListener('dragstart', function(e) { e.preventDefault(); });
+  </script>
 </body>
 </html>
